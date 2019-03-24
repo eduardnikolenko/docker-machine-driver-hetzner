@@ -1,11 +1,10 @@
 # Docker machine driver for [Hetzner Cloud](https://www.hetzner.com/cloud)
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/eduardnikolenko/docker-machine-driver-hetzner)](https://goreportcard.com/report/github.com/eduardnikolenko/docker-machine-driver-hetzner)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
+
 ## Installation
 
-### Easy way
-Download the release bundle from the releases section and place the binary that corresponds to your platform it somewhere in your PATH
-
-### Hard way
 Use go get github.com/eduardnikolenko/docker-machine-driver-hetzner and make sure that docker-machine-driver-hetzner is located somwhere in your PATH
 
 ## Usage

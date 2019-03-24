@@ -280,11 +280,9 @@ func (d *Driver) Create() error {
 	}
 
 	// Create Server
-	if err := d.createServer(); err != nil {
-		return err
-	}
+	err := d.createServer()
 
-	return nil
+	return err
 }
 
 // Start Server
