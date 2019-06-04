@@ -2,6 +2,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/eduardnikolenko/docker-machine-driver-hetzner)](https://goreportcard.com/report/github.com/eduardnikolenko/docker-machine-driver-hetzner)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=eduardnikolenko/docker-machine-driver-hetzner)](https://dependabot.com)
 
 ## Installation
 
