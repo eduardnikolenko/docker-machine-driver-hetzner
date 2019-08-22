@@ -24,8 +24,11 @@ jobs:
         run: |
           go get -v -t -d ./...
           if [ -f Gopkg.toml ]; then
-              curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-              dep ensure
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+            dep ensure
+          fi
+          if [ ! -d "$GOBIN" ]; then
+            GOBIN=$(echo "${GOPATH%%:*}/bin" | sed s#//*#/#g)
           fi
       - name: Build
         run: go build -v .
