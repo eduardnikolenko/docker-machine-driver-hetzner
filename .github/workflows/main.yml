@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
+        env:
+          GOPATH: $HOME
       - name: Install dependencies
         run: |
           go get -v -t -d ./...
