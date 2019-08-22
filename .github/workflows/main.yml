@@ -22,9 +22,8 @@ jobs:
           go-version: ${{ matrix.go }}
       - name: Install dependencies
         run: |
-          ls -la
           if [ ! -d "$GOBIN" ]; then
-            mkdir go/bin
+            mkdir "$GOBIN"
           fi
           go get -v -t -d ./...
           if [ -f Gopkg.toml ]; then
