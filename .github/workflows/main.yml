@@ -28,7 +28,7 @@ jobs:
             dep ensure
           fi
           if [ ! -d "$GOBIN" ]; then
-            GOBIN=$(echo "${GOPATH%%:*}/bin" | sed s#//*#/#g)
+            mkdir go/bin
           fi
       - name: Build
         run: go build -v .
