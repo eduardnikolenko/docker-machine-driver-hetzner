@@ -22,9 +22,6 @@ jobs:
           go-version: ${{ matrix.go }}
       - name: Install dependencies
         run: |
-          if [ ! -d "$GOBIN" ]; then
-            mkdir "$GOBIN"
-          fi
           go get -v -t -d ./...
           if [ -f Gopkg.toml ]; then
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
