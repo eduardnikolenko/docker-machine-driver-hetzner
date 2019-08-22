@@ -16,7 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup Go
-        uses: actions/setup-node@v1
+        id: go
+        uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
       - name: Install dependencies
@@ -31,4 +32,4 @@ jobs:
     strategy:
       matrix:
         go: [1.13]
-        os: [macOS, Ubuntu, Windows]
+        os: [macOS, Ubuntu]
