@@ -22,13 +22,14 @@ jobs:
           go-version: ${{ matrix.go }}
       - name: Install dependencies
         run: |
+          ls -la
+          if [ ! -d "$GOBIN" ]; then
+            mkdir go/bin
+          fi
           go get -v -t -d ./...
           if [ -f Gopkg.toml ]; then
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
-          fi
-          if [ ! -d "$GOBIN" ]; then
-            mkdir go/bin
           fi
       - name: Build
         run: go build -v .
